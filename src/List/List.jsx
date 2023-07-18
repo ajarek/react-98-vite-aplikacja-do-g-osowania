@@ -17,7 +17,9 @@ const List = ({array}) => {
             </div>
             </div>
             <div className="radio">
-              <input type="radio" name="radio" id="" />
+            <label htmlFor={el.id}>Głosuj
+              <input type="radio" name="radio" id={el.id} />
+              </label>
             </div>
           </div>
         )
