@@ -1,0 +1,94 @@
+[
+  
+  {
+    "id":"1",
+    "name":"Biedroń Robert ",
+    "partia":"Wiosna",
+    "src":"/biedron.jpg",
+    "poparcie":"40"
+  },
+  {
+    "id":"2",
+    "name":"Bosak Krzysztof",
+    "partia":"Konfederacja",
+    "src":"/bosak.jpg",
+    "poparcie":"20"
+  },
+  {
+    "id":"3",
+    "name":"Braun Grzegorz",
+    "partia":"Konfederacja",
+    "src":"/braun.jpg",
+    "poparcie":"20"
+  },
+  {
+    "id":"4",
+    "name":"Czarzasty Włodzimierz",
+    "partia":"Lewica",
+    "src":"/czarzasty.jpg",
+    "poparcie":"45"
+  },
+  {
+    "id":"5",
+    "name":"Hołownia Szymon",
+    "partia":"Polska 2050",
+    "src":"/holownia.jpg",
+    "poparcie":"10"
+  },
+  {
+    "id":"6",
+    "name":"Jarosław Kaczyński",
+    "partia":"PIS",
+    "src":"/kaczynski.jpg",
+    "poparcie":"50"
+  },
+  {
+    "id":"7",
+    "name":"Kołodziejczak Michał",
+    "partia":"Agrounia",
+    "src":"/kolodziejczak.jpg",
+    "poparcie":"50"
+  },
+  {
+    "id":"8",
+    "name":"Kosiniak Kamysz Włodzimierz ",
+    "partia":"PSL",
+    "src":"/kosiniak.jpg",
+    "poparcie":"10"
+  },
+  {
+    "id":"9",
+    "name":"Mentzen Sławomir",
+    "partia":"Konfederacja",
+    "src":"/mentzen.jpg",
+    "poparcie":"20"
+  },
+  {
+    "id":"10",
+    "name":"Korwin Mikke Janusz",
+    "partia":"Konfederacja",
+    "src":"/mikke.jpg",
+    "poparcie":"10"
+  },
+  {
+    "id":"11",
+    "name":"Tusk Donald",
+    "partia":"KO",
+    "src":"/tusk.jpg",
+    "poparcie":"60"
+  },
+  {
+    "id":"12",
+    "name":"Zandberg",
+    "partia":"Razem",
+    "src":"/zandberg.jpg",
+    "poparcie":"20"
+  },
+  {
+    "id":"13",
+    "name":"Ziobro Zbigniew",
+    "partia":"Suwerenna Polska",
+    "src":"/ziobro.jpg",
+    "poparcie":"7"
+  }
+]
