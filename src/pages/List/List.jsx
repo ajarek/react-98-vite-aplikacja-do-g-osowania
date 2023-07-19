@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../../components/Header/Header'
 import './List.css';
 
 const List = ({ array }) => {
@@ -7,6 +8,7 @@ const List = ({ array }) => {
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+    alert('zagłosowałaś na '+ event.target.value)
     
   };
 
@@ -22,6 +24,7 @@ const List = ({ array }) => {
   
   return (
     <div className='list'>
+      <Header/>
       {array.map((el) => {
         return (
           <div key={el.id} className='card'>
