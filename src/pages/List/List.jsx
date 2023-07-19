@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
 import Header from '../../components/Header/Header'
 import './List.css';
 
-const List = ({ array }) => {
-  const [selectedOption, setSelectedOption] = useState();
-  const [range, setRange] = useState([]);
-
+const List = () => {
+  const { selectedOption, setSelectedOption, range, setRange,data } = useContext(AppContext)
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
     alert('zagłosowałaś na '+ event.target.value)
@@ -14,7 +13,7 @@ const List = ({ array }) => {
 
   const handleRangeChange = (event, el) => {
     const newPoparcie = event.target.value;
-    const updatedArray = array.map((item) =>
+    const updatedArray = data.map((item) =>
       item.id === el.id ? { ...item, poparcie: newPoparcie } : item
     );
     setRange(updatedArray)
@@ -25,7 +24,7 @@ const List = ({ array }) => {
   return (
     <div className='list'>
       <Header/>
-      {array.map((el) => {
+      {data.map((el) => {
         return (
           <div key={el.id} className='card'>
             <div className='img'>

@@ -4,6 +4,7 @@ export const AppContext = createContext()
 import data from './assets/data.json'
 import Main from './layouts/Main/Main'
 import List from './pages/List/List'
+import Result from './pages/Result/Result'
 import Error from './pages/Error/Error'
 
 const router = createBrowserRouter([
@@ -14,7 +15,12 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <List array={data} />,
+        element: <List/>,
+        errorElement: <Error />,
+      },
+      {
+        path: '/wyniki',
+        element: <Result />,
         errorElement: <Error />,
       },
       
@@ -22,11 +28,12 @@ const router = createBrowserRouter([
   },
 ])
 function App() {
-  
+  const [selectedOption, setSelectedOption] = useState();
+  const [range, setRange] = useState([]);
   return (
     <div className='App'>
       <AppContext.Provider
-        value={{}}
+        value={{selectedOption, setSelectedOption, range, setRange, data }}
       >
         <RouterProvider router={router} />
       </AppContext.Provider>

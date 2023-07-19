@@ -26,6 +26,12 @@ const Nav = () => {
           >
            Panel Głosowania
           </Link>
+          <Link
+            className='link'
+            to={'/wyniki'}
+          >
+           Wyniki
+          </Link>
           
         </ul>
       </nav>
