@@ -90,5 +90,12 @@
     "partia":"Suwerenna Polska",
     "src":"/ziobro.jpg",
     "poparcie":"7"
+  },
+  {
+    "id":"14",
+    "name":"Żaden z nich",
+    "partia":"Jakaś...",
+    "src":"/zaden.jpg",
+    "poparcie":"18"
   }
 ]

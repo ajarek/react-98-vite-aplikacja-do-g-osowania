@@ -1,10 +1,13 @@
 import data from './assets/data.json'
 import List from './List/List'
+import Header from './Header/Header'
 
 const App = () => {
+ 
   return (
     <div>
-     <List array={data}/>
+      <Header/>
+     <List array={data}  />
     </div>
   )
 }
