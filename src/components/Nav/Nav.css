@@ -13,73 +13,108 @@
   z-index: 5;
 }
 .nav .logo {
-  width: 25%;
+  
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
+.nav .link-logo{
+  display: flex;
+}
 .nav .logo .img {
   width: 40px;
   height: 40px;
+  margin-right:8px;
 }
 .nav .logo .img img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
-.nav .logo span {
-  background-color: var(--blueViolet);
-  border-radius: 8px;
-  margin-right: 16px;
-}
-.nav ul {
-  width: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.logo .link {
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.link h1 {
-  font-size: 1.4rem;
-  font-weight: 800;
-  margin-left:8px;
-}
-.wrapper span,
-.preview span {
-  margin-left: 8px;
-}
-
 .link {
   text-decoration: none;
-  font-size: 1.4rem;
-  letter-spacing: 1px;
-  padding: 4px 8px;
+  font-size: 1.5rem;
   color: var(--black);
-  border-radius: 5px;
+  padding: 0 16px;
+  border-radius: 8px;
   transition: all 0.3s ease-in-out;
 }
-
-.preview .link {
-  border: 1px solid var(--blueViolet);
-}
-
 .link:hover,
 .link:focus {
   color: var(--blueViolet);
   background-color: var(--lightBlueviolet);
 }
-@media (max-width: 765px) {
-  .nav {
-    padding: 0 30px;
-  }
-  .logo h1,
-  .wrapper span,
-  .preview span {
+
+.nav ul {
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0px;
+  top: 6vh;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+@media (min-width: 876px) {
+  .hamburger {
     display: none;
+  }
+}
+
+@media (max-width: 875px) {
+  .nav .wrapper {
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 0;
+    top: -100vh;
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+    background: var(--grey);
+    height: 16rem;
+  }
+
+  .link {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-none {
+    transform: translateY(100vh);
+  }
+  .nav .wrapper {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 485px) {
+  .nav {
+    padding: 0 0rem;
+  }
+  .nav .title {
+    width: 80%;
+  }
+  .nav .logo h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .nav .logo .img {
+    width: 20px;
+    height: 20px;
+  }
+  .nav .wrapper {
+    width: 100%;
+  }
+  .link {
+    font-size: 1rem;
   }
 }

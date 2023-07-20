@@ -1,5 +1,5 @@
 .list{
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding:90px 16px 40px 16px;
   display: flex;
@@ -49,4 +49,12 @@ width: 300px;
   width: 30px;
   height: 30px;
   margin-left: 10px;
+}
+@media (max-width:1050px) {
+  .list .card{
+    height: 100%;
+   grid-template-columns: repeat(1, 1fr);
+   border: 1px solid var(--grey-light);
+   place-items: center;
+ }
 }
