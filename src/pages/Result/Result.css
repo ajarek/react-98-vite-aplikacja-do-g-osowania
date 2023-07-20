@@ -1,22 +1,22 @@
-.result{
+.result {
   width: 100vw;
   min-height: 100vh;
-  padding:90px 16px 40px 16px;
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
- place-items: end;
- gap:5px;
+  padding: 90px 16px 40px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  place-items: end;
+  gap: 5px;
 }
-.result .column{
+.result .column {
   background-color: var(--blue);
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding:8px 0 ;
+  padding: 8px 0;
   font-size: 1.2rem;
   color: var(--white);
 }
-.result .name{
+.result .name {
   display: flex;
   justify-content: center;
   width: 80px;

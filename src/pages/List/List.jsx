@@ -1,45 +1,54 @@
-import { React, useState, useContext, useEffect } from 'react'
+import { React, useContext } from 'react'
 import { AppContext } from '../../App'
 import Header from '../../components/Header/Header'
-import './List.css';
+import './List.css'
 
 const List = () => {
-  const { selectedOption, setSelectedOption, range, setRange,data } = useContext(AppContext)
+  const { selectedOption, setSelectedOption, range, setRange, data } =
+    useContext(AppContext)
   const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-    alert('zagłosowałaś na '+ event.target.value)
-    
-  };
+    setSelectedOption(event.target.value)
+    alert('zagłosowałaś na ' + event.target.value)
+  }
 
   const handleRangeChange = (event, el) => {
-    const newPoparcie = event.target.value;
+    const newPoparcie = event.target.value
     const updatedArray = data.map((item) =>
       item.id === el.id ? { ...item, poparcie: newPoparcie } : item
-    );
+    )
     setRange(updatedArray)
-  };
-  
-  
-  
+  }
+
   return (
     <div className='list'>
-      <Header/>
+      <Header />
       {data.map((el) => {
         return (
-          <div key={el.id} className='card'>
+          <div
+            key={el.id}
+            className='card'
+          >
             <div className='img'>
-              <img src={el.src} alt={el.name} />
+              <img
+                src={el.src}
+                alt={el.name}
+              />
             </div>
             <div className='wrapper-info'>
               <h1>{el.name}</h1>
               <h2>partia: {el.partia}</h2>
               <div className='range'>
-                <label htmlFor='range'>poparcie: {range.length>0?range.map(rn=>{
-                  if(rn.id===el.id){
-                    return rn.poparcie
-                  }
-                  
-                }):el.poparcie}%</label>
+                <label htmlFor='range'>
+                  poparcie:{' '}
+                  {range.length > 0
+                    ? range.map((rn) => {
+                        if (rn.id === el.id) {
+                          return rn.poparcie
+                        }
+                      })
+                    : el.poparcie}
+                  %
+                </label>
                 <input
                   type='range'
                   name=''
@@ -63,10 +72,10 @@ const List = () => {
               </label>
             </div>
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default List;
+export default List

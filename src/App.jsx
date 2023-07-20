@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <List/>,
+        element: <List />,
         errorElement: <Error />,
       },
       {
@@ -23,17 +23,16 @@ const router = createBrowserRouter([
         element: <Result />,
         errorElement: <Error />,
       },
-      
     ],
   },
 ])
 function App() {
-  const [selectedOption, setSelectedOption] = useState();
-  const [range, setRange] = useState([]);
+  const [selectedOption, setSelectedOption] = useState()
+  const [range, setRange] = useState([])
   return (
     <div className='App'>
       <AppContext.Provider
-        value={{selectedOption, setSelectedOption, range, setRange, data }}
+        value={{ selectedOption, setSelectedOption, range, setRange, data }}
       >
         <RouterProvider router={router} />
       </AppContext.Provider>
