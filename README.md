@@ -1,4 +1,4 @@
-![Zrzut ekranu (280)](https://github.com/ajarek/react-98-vite-aplikacja-do-g-osowania/assets/61388692/3b344cf0-c4b0-48b3-98c8-ffa748fbb790)
+
 # react-98-vite-aplikacja-do-g-osowania
 
 
